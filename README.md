@@ -5,7 +5,7 @@
 citation
 ```
 
-**[NEW!]**  2022/4/10 - We have released the code and models.
+**[NEW!]**  2022/5/5 - We have released the code and models.
 
 ## Overview
 
@@ -117,6 +117,8 @@ We provide our annotation and data structure bellow for easy installation.
 
 ## Model ZOO 
 
+Here we provide video data list and pretrained weights in this [folder](). 
+
 ## ImageNet-1k
 
 We provide ImageNet-1k pre-trained weights for five video models. All models are trained for 300 epochs. Please follow the scripts we provided to evaluate or finetune on video dataset.
@@ -133,17 +135,32 @@ We provide ImageNet-1k pre-trained weights for five video models. All models are
 
 
 
-Here we provide some off-the-shelf [pretrained models](https://drive.google.com/drive/folders/1H53eLM30cknAlFmMklLA9YoB1i34xh_1?usp=sharing). 
+## Kinectics-400
 
-| Models/Configs | Resolution | Frames * Crops * Clips | Top-1  |                         Checkpoints                          |
-|:--------------:|:----------:|:----------------------:| -----  | :----------------------------------------------------------: |
-|    ir-CSN50    |  224*224   |           -            |        |                                                                                              |
-|    ir-CSN50    | 256 * 256  |       8 * 3 * 10       | 76.8%  | [ckpt](https://drive.google.com/drive/folders/1sFfmP3yrfc7IzRshEELOby7-aEoymIFL?usp=sharing) |
-|                | 256 * 256  |      16 * 3 * 10       | 76.9%  | [ckpt](https://drive.google.com/drive/folders/1nCefjTSPm0Q67e2oSHAhYQgofcim9jOe?usp=sharing) |
-|                | 224 * 224  |       8 * 1 * 1        | 46.5%  | [ckpt](https://drive.google.com/drive/folders/1XX5CNDvckaV7d9EH24SXmQsMT7s_a3Zm?usp=sharing) |
-|                | 224 * 224  |       16 * 1 * 1       | 47.6%  | [ckpt](https://drive.google.com/drive/folders/1wPbID2bVETG91SxpDURI_GeAOn8sqCda?usp=sharing) |
-|    ir-CSN50    | 256 * 256  |       8 * 3 * 1        | 61.4%  | [ckpt](https://drive.google.com/drive/folders/1dNxo2F4yiREfq4FdFAaSzPZbtYz8qrq7?usp=sharing) |
-|                | 256 * 256  |       16 * 3 * 2       | 64.6%  | [ckpt](https://drive.google.com/drive/folders/1dr5MEJKVEL_xVFrrHDzPOmdV_xZHX2Py?usp=sharing) |
+
+| Models/Configs  |  Resolution  |      Frames * Crops * Clips      | Top-1 |
+|:---------------:|:------------:|:--------------------------------:|-------|
+|    ir-CSN50     |  256 * 256   |            8 * 3 * 10            | 76.8% |
+|    R2plu1d34    |  256 * 256   |            8 * 3 * 10            |  |
+| SlowFast50-4x16 |  256 * 256   |           16 * 3 * 10            |  |
+| SlowFast50-8x8  |  256 * 256   |           16 * 3 * 10            |  |
+|   Slowonly50    |  224 * 224   |            8 * 1 * 1             |  |
+|      X3D-S      |  224 * 224   |            16 * 1 * 1            |  |
+
+
+
+## Something-Something V2
+
+
+| Models/Configs |  Resolution  |      Frames * Crops * Clips      | Top-1 |
+|:--------------:|:------------:|:--------------------------------:|------|
+|    ir-CSN50    |  256 * 256   |            8 * 3 * 10            | 61.4% |
+|    R2plu1d34    |  256 * 256   |            8 * 3 * 10            |  |
+| SlowFast50-4x16 |  256 * 256   |           16 * 3 * 10            |  |
+| SlowFast50-8x8  |  256 * 256   |           16 * 3 * 10            |  |
+|   Slowonly50    |  224 * 224   |            8 * 1 * 1             |  |
+|      X3D-S      |  224 * 224   |            16 * 1 * 1            |  |
+
 
 After downloading the checkpoints and putting them into the target path, you can fine-tune or test the models with corresponding [configs](Spatiotemporal_Finetuning/configs) following the instruction bellow.
 
@@ -154,13 +171,22 @@ After downloading the checkpoints and putting them into the target path, you can
 ## Build 
 After having the above dependencies, run:
 ```shell
-git clone 
+git clone https://github.com/UCSC-VLAA/Image-Pretraining-for-Video
 cd Image_Pre_Training # first pretrain the 3D model on ImageNet
 cd Spatiotemporal_Finetuning # then finetune the model on target video dataset
 ```
 
 
 ## Pre-Training
+
+We have provided some widely-used 3D model pre-train weights that you can directly used for evaluation or finetuning.
+
+For example, you can evaluate the CSN model on Imagenet by running: 
+
+```shell
+bash scripts/csn/distributed_eval.sh [number of gpus]
+```
+
 
 The pre-training scripts for listed models are located in [scripts](Image_Pre_Training/scripts). Before training the model on ImageNet, you should indicate some paths you would like to store the checkpoint `your data path` and `--output`. By defualt, we use [wandb](https://docs.wandb.ai/quickstart) to show the curve.
 
@@ -169,6 +195,7 @@ For example, pre-train a CSN model on Imagenet:
 ```shell
 bash scripts/csn/distributed_train.sh [number of gpus]
 ```
+
 
 ## Fine-tuning
 
