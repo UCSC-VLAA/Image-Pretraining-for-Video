@@ -1,4 +1,4 @@
-# In Defense of Image Pre-Training for Spatiotemporal Recognition   [[arXiv]]()
+# In Defense of Image Pre-Training for Spatiotemporal Recognition   [[arXiv]](https://arxiv.org/abs/2205.01721)
 
 
 
@@ -8,7 +8,7 @@
 
 
 
-This is a PyTorch/GPU implementation of the paper  [In Defense of Image Pre-Training for Spatiotemporal Recognition]().
+This is a PyTorch/GPU implementation of the paper  [In Defense of Image Pre-Training for Spatiotemporal Recognition](https://arxiv.org/abs/2205.01721).
 
 
 <div  align="center">    
