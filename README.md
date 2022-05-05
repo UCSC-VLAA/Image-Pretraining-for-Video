@@ -39,9 +39,9 @@ This is a PyTorch/GPU implementation of the paper  [In Defense of Image Pre-Trai
 
 - [Prerequisites](#prerequisites)
 
-- [Data Preparation](#data-preparation)
+- [Data Preparation](#Video Dataset Preparation)
 
-- [Pretrained Models](#pretrained-models)
+- [Model ZOO ](#Model ZOO )
 
 - [Usage](#usage)
 
@@ -83,12 +83,11 @@ Some notes before preparing the two datasets:
 2. The frame resolution of Kinetics-400 we used is with a short-side 320. The number of train / validation data for our experiments is 240436 /19796. We also provide the [train/val list]().  
 
 
-
 We provide our annotation and data structure bellow for easy installation.
 
 
 - Generate the annotation.
-
+  
   The annotation usually includes train.txt, val.txt. The format of *.txt file is like:
 
   ```
@@ -117,49 +116,48 @@ We provide our annotation and data structure bellow for easy installation.
 
 ## Model ZOO 
 
-Here we provide video data list and pretrained weights in this [folder](). 
+Here we provide video dataset list and pretrained weights in this [OneDrive]() or [GoogleDrive](). 
 
 ## ImageNet-1k
 
 We provide ImageNet-1k pre-trained weights for five video models. All models are trained for 300 epochs. Please follow the scripts we provided to evaluate or finetune on video dataset.
 
-|                                   Models/Configs                                    | Resolution | Top-1 | Checkpoints |
-|:-----------------------------------------------------------------------------------:|:----------:|-------|:-----------:|
-|                     [ir-CSN50](Image_Pre_Training/scripts/csn)                      | 224 * 224  | 78.8% |             |
-|                  [R2plu1d34](Image_Pre_Training/scripts/r2plus1d)                   | 224 * 224  | 79.6% |             |
-|               [SlowFast50-4x16](Image_Pre_Training/scripts/slowfast)                | 224 * 224  | 79.9% |             |
-|                [SlowFast50-8x8](Image_Pre_Training/scripts/slowfast)                | 224 * 224  | 79.1% |             |
-|                  [Slowonly50](Image_Pre_Training/scripts/slowonly)                  | 224 * 224  | 79.9% |             |
-|                       [X3D-S](Image_Pre_Training/scripts/x3d)                       | 224 * 224  | 74.8% |             |
+|                                   Models/Configs                                    | Resolution | Top-1 |    Checkpoints     |
+|:-----------------------------------------------------------------------------------:|:----------:|-------|:------------------:|
+|                     [ir-CSN50](Image_Pre_Training/scripts/csn)                      | 224 * 224  | 78.8% |      [ckpt]()      |
+|                  [R2plu1d34](Image_Pre_Training/scripts/r2plus1d)                   | 224 * 224  | 79.6% |      [ckpt]()      |
+|               [SlowFast50-4x16](Image_Pre_Training/scripts/slowfast)                | 224 * 224  | 79.9% |      [ckpt]()      |
+|                [SlowFast50-8x8](Image_Pre_Training/scripts/slowfast)                | 224 * 224  | 79.1% |      [ckpt]()      |
+|                  [Slowonly50](Image_Pre_Training/scripts/slowonly)                  | 224 * 224  | 79.9% |      [ckpt]()      |
+|                       [X3D-S](Image_Pre_Training/scripts/x3d)                       | 224 * 224  | 74.8% |      [ckpt]()      |
 
 
 
+## Kinetics-400
 
-## Kinectics-400
+Here we provided the 50-epoch fine-tuning configs and checkpoints. We also include some 100-epochs checkpoints for a better performance but with a comparable computation.  
 
-
-| Models/Configs  |  Resolution  |      Frames * Crops * Clips      | Top-1 |
-|:---------------:|:------------:|:--------------------------------:|-------|
-|    ir-CSN50     |  256 * 256   |            8 * 3 * 10            | 76.8% |
-|    R2plu1d34    |  256 * 256   |            8 * 3 * 10            |  |
-| SlowFast50-4x16 |  256 * 256   |           16 * 3 * 10            |  |
-| SlowFast50-8x8  |  256 * 256   |           16 * 3 * 10            |  |
-|   Slowonly50    |  224 * 224   |            8 * 1 * 1             |  |
-|      X3D-S      |  224 * 224   |            16 * 1 * 1            |  |
+|                                                  Models/Configs                                                  | Resolution | Frames * Crops * Clips | 50-epoch Top-1 | 100-epoch Top1       | Checkpoints folder |
+|:----------------------------------------------------------------------------------------------------------------:|:----------:|:----------------------:|----------------|----------------------|--------------------|
+|           [ir-CSN50](Spatiotemporal_Finetuning/configs/recognition/csn/ircsn50_32x2_STS_k400_video.py)           | 256 * 256  |      32 * 3 * 10       | 76.8%          | 76.7%                | [ckpt]()           |
+|      [R2plu1d34](Spatiotemporal_Finetuning/configs/recognition/r2plus1d/r2plus1d_r34_8x8_STS_k400_video.py)      | 256 * 256  |       8 * 3 * 10       | 76.2%          | Over training budget | [ckpt]()           |
+| [SlowFast50-4x16](Spatiotemporal_Finetuning/configs/recognition/slowfast/slowfast50_4x16_32x2_STS_k400_video.py) | 256 * 256  |      32 * 3 * 10       | 76.2%          |                      | [ckpt]()           |
+|  [SlowFast50-8x8](Spatiotemporal_Finetuning/configs/recognition/slowfast/slowfast50_8x8_32x2_STS_k400_video.py)  | 256 * 256  |      32 * 3 * 10       | 77.2%          | 77.9%                | [ckpt]()           |
+|      [Slowonly50](Spatiotemporal_Finetuning/configs/recognition/slowonly/slowonly50_8x8_STS_k400_video.py)       | 256 * 256  |       8 * 3 * 10       | 75.7%          | Over training budget | [ckpt]()           |
+|             [X3D-S](Spatiotemporal_Finetuning/configs/recognition/x3d/x3d_s_13x6_STS_k400_video.py)              | 192 * 192  |      13 * 3 * 10       | 72.5%          |                      | [ckpt]()           |
 
 
 
 ## Something-Something V2
 
 
-| Models/Configs |  Resolution  |      Frames * Crops * Clips      | Top-1 |
-|:--------------:|:------------:|:--------------------------------:|------|
-|    ir-CSN50    |  256 * 256   |            8 * 3 * 10            | 61.4% |
-|    R2plu1d34    |  256 * 256   |            8 * 3 * 10            |  |
-| SlowFast50-4x16 |  256 * 256   |           16 * 3 * 10            |  |
-| SlowFast50-8x8  |  256 * 256   |           16 * 3 * 10            |  |
-|   Slowonly50    |  224 * 224   |            8 * 1 * 1             |  |
-|      X3D-S      |  224 * 224   |            16 * 1 * 1            |  |
+|                                                                                       Models/Configs                                                                                       | Resolution | Frames * Crops * Clips | Top-1 | Checkpoints |
+|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----------:|:----------------------:|-------|-------------|
+|                                                [ir-CSN50](Spatiotemporal_Finetuning/configs/recognition/csn/ircsn50_1x8_STS_sthv2_video.py)                                                | 256 * 256  |       8 * 3 * 1        | 61.4% |    [ckpt]() |
+|                                          [R2plu1d34](Spatiotemporal_Finetuning/configs/recognition/r2plus1d/r2plus1d_r34_1x8_STS_sthv2_video.py)                                           | 256 * 256  |       8 * 3 * 1        | 63.0% |    [ckpt]() |
+|                                     [SlowFast50-4x16](Spatiotemporal_Finetuning/configs/recognition/slowfast/slowfast50_4x16_1x32_STS_sthv2_video.py)                                      | 256 * 256  |       32 * 3 * 1       | 57.2% |    [ckpt]() | 
+|                                           [Slowonly50](Spatiotemporal_Finetuning/configs/recognition/slowonly/slowonly50_1x8_STS_sthv2_video.py)                                           | 224 * 224  |       8 * 3 * 1        | 62.7% |    [ckpt]() |
+|                                                  [X3D-S](Spatiotemporal_Finetuning/configs/recognition/x3d/x3d_s_1x8_STS_sthv2_video.py)                                                   | 224 * 224  |       8 * 3 * 1        | 58.3% |    [ckpt]() |
 
 
 After downloading the checkpoints and putting them into the target path, you can fine-tune or test the models with corresponding [configs](Spatiotemporal_Finetuning/configs) following the instruction bellow.
@@ -179,16 +177,16 @@ cd Spatiotemporal_Finetuning # then finetune the model on target video dataset
 
 ## Pre-Training
 
-We have provided some widely-used 3D model pre-train weights that you can directly used for evaluation or finetuning.
+We have provided some widely-used 3D model pre-trained weights that you can directly use for evaluation or fine-tuning.
 
-For example, you can evaluate the CSN model on Imagenet by running: 
+After downloading the pre-training weights, for example, you can evaluate the CSN model on Imagenet by running: 
 
 ```shell
 bash scripts/csn/distributed_eval.sh [number of gpus]
 ```
 
 
-The pre-training scripts for listed models are located in [scripts](Image_Pre_Training/scripts). Before training the model on ImageNet, you should indicate some paths you would like to store the checkpoint `your data path` and `--output`. By defualt, we use [wandb](https://docs.wandb.ai/quickstart) to show the curve.
+The pre-training scripts for listed models are located in [scripts](Image_Pre_Training/scripts). Before training the model on ImageNet, you should indicate some paths you would like to store the checkpoint `your data path` and `--output`. By default, we use [wandb](https://docs.wandb.ai/quickstart) to show the curve.
 
 For example, pre-train a CSN model on Imagenet: 
 
@@ -208,6 +206,7 @@ Some Notes:
 * Simply setting the `reshape_t` or `reshape_st` in the model config to False can disable the STS Conv. 
 
 Then you can use the following command to fine-tune the models.
+
 ```shell
 bash tools/dist_train.sh ${CONFIG_FILE} [optional arguments]
 ```
@@ -215,7 +214,7 @@ bash tools/dist_train.sh ${CONFIG_FILE} [optional arguments]
 Example: train a CSN model on Kinetics-400 dataset with periodic validation.
 
 ```shell
-bash tools/dist_train.sh configs/recognition/csn/ircsn50_32x2_STS_k400_video.py 4 --validate 
+bash tools/dist_train.sh configs/recognition/csn/ircsn50_32x2_STS_k400_video.py [number of gpus] --validate 
 ```
 
 
@@ -231,7 +230,7 @@ Example: test a CSN model on Kinetics-400 dataset and dump the result to a json 
 
 ```shell
 bash tools/dist_test.sh configs/recognition/csn/ircsn50_32x2_STS_k400_video.py \
-    checkpoints/SOME_CHECKPOINT.pth 4 --eval top_k_accuracy mean_class_accuracy \
+    checkpoints/SOME_CHECKPOINT.pth [number of gpus] --eval top_k_accuracy mean_class_accuracy \
     --out result.json --average-clips prob 
 ```
 

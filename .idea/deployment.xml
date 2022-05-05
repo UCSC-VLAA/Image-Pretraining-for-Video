@@ -3,7 +3,42 @@
   <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false">
     <option name="confirmBeforeUploading" value="false" />
     <serverData>
+      <paths name="2u-2">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/lxh/code/image-pretraining-for-video" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="lxh@169.233.1.13:22 password">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/lxh/code/in_defense_image_pretraining" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="lxh@169.233.1.13:22 password (1)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/lxh/code/in_defense_image_pretraining" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="lxh@169.233.1.13:22 password (2)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/lxh/code/in_defense_image_pretraining" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="lxh@169.233.1.13:22 password (3)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/lxh/code/in_defense_image_pretraining" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="lxh@169.233.1.13:22 password (4)">
         <serverdata>
           <mappings>
             <mapping deploy="/home/lxh/code/in_defense_image_pretraining" local="$PROJECT_DIR$" />

@@ -111,7 +111,7 @@ evaluation = dict(
 find_unused_parameters = False
 work_dir = './work_dirs/ircsn_bnfrozen_r50_32x2x1_180e_kinetics400_rgb'  # noqa: E501
 
-load_from = '/data1/lxh/save/output/ir_csn_50_bn_sgd_half_baseline_100/model_best.pth.tar' #remember to change it to your pr-trainined weights' path
+#load_from = #remember to change it to your pr-trainined weights' path
 
 checkpoint_config = dict(interval=5)
 fp16 = dict(loss_scale=512.,)

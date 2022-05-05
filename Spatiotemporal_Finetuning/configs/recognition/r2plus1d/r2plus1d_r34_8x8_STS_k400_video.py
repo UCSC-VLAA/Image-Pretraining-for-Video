@@ -102,7 +102,7 @@ evaluation = dict(
 work_dir = './work_dirs/r2plus1d_r34_video_3d_8x8x1_180e_kinetics400_rgb/'
 
 
-load_from = '/data1/lxh/save/output/r2+1d_34_baseline_a2_v3d_300/model_best.pth.tar' # change the path to your pre-trained weight
+#load_from = '[change the path to your pre-trained weight]'
 total_epochs = 50
 checkpoint_config = dict(interval=5)
 inflate = False
