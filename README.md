@@ -152,7 +152,7 @@ Here we provided the 50-epoch fine-tuning configs and checkpoints. We also inclu
 
 
 |                                                                                       Models/Configs                                                                                       | Resolution | Frames * Crops * Clips | Top-1 | Checkpoints |
-|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----------:|------------------------|:-----:|-------------|
+|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|------------|:----------------------:|:-----:|:-----------:|
 |                                                [ir-CSN50](Spatiotemporal_Finetuning/configs/recognition/csn/ircsn50_1x8_STS_sthv2_video.py)                                                | 256 * 256  |       8 * 3 * 1        | 61.4% |  [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNU0rUgrmoIaQaYXwg?e=cMPaiM)   |
 |                                          [R2plu1d34](Spatiotemporal_Finetuning/configs/recognition/r2plus1d/r2plus1d_r34_1x8_STS_sthv2_video.py)                                           | 256 * 256  |       8 * 3 * 1        | 63.0% |  [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNU0rUgrmoIaQaYXwg?e=cMPaiM)   |
 |                                     [SlowFast50-4x16](Spatiotemporal_Finetuning/configs/recognition/slowfast/slowfast50_4x16_1x32_STS_sthv2_video.py)                                      | 256 * 256  |       32 * 3 * 1       | 57.2% |  [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNU0rUgrmoIaQaYXwg?e=cMPaiM)   | 
