@@ -141,7 +141,7 @@ Here we provided the 50-epoch fine-tuning configs and checkpoints. We also inclu
 |:----------------------------------------------------------------------------------------------------------------:|:----------:|:----------------------:|----------------|----------------------|--------------------|
 |           [ir-CSN50](Spatiotemporal_Finetuning/configs/recognition/csn/ircsn50_32x2_STS_k400_video.py)           | 256 * 256  |      32 * 3 * 10       | 76.8%          | 76.7%                | [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUoq-nohdT5nwtTiw?e=aZfsJQ)           |
 |      [R2plu1d34](Spatiotemporal_Finetuning/configs/recognition/r2plus1d/r2plus1d_r34_8x8_STS_k400_video.py)      | 256 * 256  |       8 * 3 * 10       | 76.2%          | Over training budget | [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUoq-nohdT5nwtTiw?e=aZfsJQ)           |
-| [SlowFast50-4x16](Spatiotemporal_Finetuning/configs/recognition/slowfast/slowfast50_4x16_32x2_STS_k400_video.py) | 256 * 256  |      32 * 3 * 10       | 76.2%          |                      | [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUoq-nohdT5nwtTiw?e=aZfsJQ)           |
+| [SlowFast50-4x16](Spatiotemporal_Finetuning/configs/recognition/slowfast/slowfast50_4x16_32x2_STS_k400_video.py) | 256 * 256  |      32 * 3 * 10       | 76.2%          | -                    | [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUoq-nohdT5nwtTiw?e=aZfsJQ)           |
 |  [SlowFast50-8x8](Spatiotemporal_Finetuning/configs/recognition/slowfast/slowfast50_8x8_32x2_STS_k400_video.py)  | 256 * 256  |      32 * 3 * 10       | 77.2%          | 77.9%                | [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUoq-nohdT5nwtTiw?e=aZfsJQ)           |
 |      [Slowonly50](Spatiotemporal_Finetuning/configs/recognition/slowonly/slowonly50_8x8_STS_k400_video.py)       | 256 * 256  |       8 * 3 * 10       | 75.7%          | Over training budget | [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUoq-nohdT5nwtTiw?e=aZfsJQ)           |
 |             [X3D-S](Spatiotemporal_Finetuning/configs/recognition/x3d/x3d_s_13x6_STS_k400_video.py)              | 192 * 192  |      13 * 3 * 10       | 72.5%          |                      | [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUoq-nohdT5nwtTiw?e=aZfsJQ)           |
@@ -244,4 +244,10 @@ Thanks the contributors of these repos!
 ## Citation
 
 ```
+@article{li2022defense,
+  title   = {In Defense of Image Pre-Training for Spatiotemporal Recognition}, 
+  author  = {Xianhang Li and Huiyu Wang and Chen Wei and Jieru Mei and Alan Yuille and Yuyin Zhou and Cihang Xie}},
+  journal = {arXiv preprint arXiv:2205.01721},
+  year    = {2022},
+}
 ```
