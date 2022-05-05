@@ -122,14 +122,14 @@ Here we provide video dataset list and pretrained weights in this [OneDrive](htt
 
 We provide ImageNet-1k pre-trained weights for five video models. All models are trained for 300 epochs. Please follow the scripts we provided to evaluate or finetune on video dataset.
 
-|                                   Models/Configs                                    | Resolution | Top-1 |    Checkpoints     |
-|:-----------------------------------------------------------------------------------:|:----------:|-------|:------------------:|
-|                     [ir-CSN50](Image_Pre_Training/scripts/csn)                      | 224 * 224  | 78.8% |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUuxWeTjltoBbJJ1g?e=Ds7MMI)      |
-|                  [R2plu1d34](Image_Pre_Training/scripts/r2plus1d)                   | 224 * 224  | 79.6% |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUuxWeTjltoBbJJ1g?e=Ds7MMI)      |
-|               [SlowFast50-4x16](Image_Pre_Training/scripts/slowfast)                | 224 * 224  | 79.9% |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUuxWeTjltoBbJJ1g?e=Ds7MMI)      |
-|                [SlowFast50-8x8](Image_Pre_Training/scripts/slowfast)                | 224 * 224  | 79.1% |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUuxWeTjltoBbJJ1g?e=Ds7MMI)      |
-|                  [Slowonly50](Image_Pre_Training/scripts/slowonly)                  | 224 * 224  | 79.9% |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUuxWeTjltoBbJJ1g?e=Ds7MMI)      |
-|                       [X3D-S](Image_Pre_Training/scripts/x3d)                       | 224 * 224  | 74.8% |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUuxWeTjltoBbJJ1g?e=Ds7MMI)      |
+|                     Models/Configs                     | Resolution | Top-1 |    Checkpoints     |
+|:------------------------------------------------------:|:----------:|-------|:------------------:|
+|       [ir-CSN50](Image_Pre_Training/scripts/csn)       | 224 * 224  | 78.8% |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUuxWeTjltoBbJJ1g?e=Ds7MMI)      |
+|   [R2plus1d34](Image_Pre_Training/scripts/r2plus1d)    | 224 * 224  | 79.6% |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUuxWeTjltoBbJJ1g?e=Ds7MMI)      |
+| [SlowFast50-4x16](Image_Pre_Training/scripts/slowfast) | 224 * 224  | 79.9% |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUuxWeTjltoBbJJ1g?e=Ds7MMI)      |
+| [SlowFast50-8x8](Image_Pre_Training/scripts/slowfast)  | 224 * 224  | 79.1% |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUuxWeTjltoBbJJ1g?e=Ds7MMI)      |
+|   [Slowonly50](Image_Pre_Training/scripts/slowonly)    | 224 * 224  | 79.9% |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUuxWeTjltoBbJJ1g?e=Ds7MMI)      |
+|        [X3D-S](Image_Pre_Training/scripts/x3d)         | 224 * 224  | 74.8% |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUuxWeTjltoBbJJ1g?e=Ds7MMI)      |
 
 
 
@@ -140,7 +140,7 @@ Here we provided the 50-epoch fine-tuning configs and checkpoints. We also inclu
 |                                                  Models/Configs                                                  | Resolution | Frames * Crops * Clips | 50-epoch Top-1 |    100-epoch Top1    | Checkpoints folder |
 |:----------------------------------------------------------------------------------------------------------------:|------------|:----------------------:|:--------------:|:--------------------:|:------------------:|
 |           [ir-CSN50](Spatiotemporal_Finetuning/configs/recognition/csn/ircsn50_32x2_STS_k400_video.py)           | 256 * 256  |      32 * 3 * 10       |     76.8%      |        76.7%         |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUoq-nohdT5nwtTiw?e=aZfsJQ)      |
-|      [R2plu1d34](Spatiotemporal_Finetuning/configs/recognition/r2plus1d/r2plus1d_r34_8x8_STS_k400_video.py)      | 256 * 256  |       8 * 3 * 10       |     76.2%      | Over training budget |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUoq-nohdT5nwtTiw?e=aZfsJQ)      |
+|     [R2plus1d34](Spatiotemporal_Finetuning/configs/recognition/r2plus1d/r2plus1d_r34_8x8_STS_k400_video.py)      | 256 * 256  |       8 * 3 * 10       |     76.2%      | Over training budget |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUoq-nohdT5nwtTiw?e=aZfsJQ)      |
 | [SlowFast50-4x16](Spatiotemporal_Finetuning/configs/recognition/slowfast/slowfast50_4x16_32x2_STS_k400_video.py) | 256 * 256  |      32 * 3 * 10       |     76.2%      |        76.9%         |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUoq-nohdT5nwtTiw?e=aZfsJQ)      |
 |  [SlowFast50-8x8](Spatiotemporal_Finetuning/configs/recognition/slowfast/slowfast50_8x8_32x2_STS_k400_video.py)  | 256 * 256  |      32 * 3 * 10       |     77.2%      |        77.9%         |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUoq-nohdT5nwtTiw?e=aZfsJQ)      |
 |      [Slowonly50](Spatiotemporal_Finetuning/configs/recognition/slowonly/slowonly50_8x8_STS_k400_video.py)       | 256 * 256  |       8 * 3 * 10       |     75.7%      | Over training budget |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUoq-nohdT5nwtTiw?e=aZfsJQ)      |
@@ -151,13 +151,13 @@ Here we provided the 50-epoch fine-tuning configs and checkpoints. We also inclu
 ## Something-Something V2
 
 
-|                                                                                       Models/Configs                                                                                       | Resolution | Frames * Crops * Clips | Top-1 | Checkpoints |
-|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|------------|:----------------------:|:-----:|:-----------:|
-|                                                [ir-CSN50](Spatiotemporal_Finetuning/configs/recognition/csn/ircsn50_1x8_STS_sthv2_video.py)                                                | 256 * 256  |       8 * 3 * 1        | 61.4% |  [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNU0rUgrmoIaQaYXwg?e=cMPaiM)   |
-|                                          [R2plu1d34](Spatiotemporal_Finetuning/configs/recognition/r2plus1d/r2plus1d_r34_1x8_STS_sthv2_video.py)                                           | 256 * 256  |       8 * 3 * 1        | 63.0% |  [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNU0rUgrmoIaQaYXwg?e=cMPaiM)   |
-|                                     [SlowFast50-4x16](Spatiotemporal_Finetuning/configs/recognition/slowfast/slowfast50_4x16_1x32_STS_sthv2_video.py)                                      | 256 * 256  |       32 * 3 * 1       | 57.2% |  [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNU0rUgrmoIaQaYXwg?e=cMPaiM)   | 
-|                                           [Slowonly50](Spatiotemporal_Finetuning/configs/recognition/slowonly/slowonly50_1x8_STS_sthv2_video.py)                                           | 256 * 256  |       8 * 3 * 1        | 62.7% |  [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNU0rUgrmoIaQaYXwg?e=cMPaiM)   |
-|                                                  [X3D-S](Spatiotemporal_Finetuning/configs/recognition/x3d/x3d_s_1x8_STS_sthv2_video.py)                                                   | 256 * 256  |       8 * 3 * 1        | 58.3% |  [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNU0rUgrmoIaQaYXwg?e=cMPaiM)   |
+|                                                  Models/Configs                                                   | Resolution | Frames * Crops * Clips | Top-1 | Checkpoints |
+|:-----------------------------------------------------------------------------------------------------------------:|------------|:----------------------:|:-----:|:-----------:|
+|           [ir-CSN50](Spatiotemporal_Finetuning/configs/recognition/csn/ircsn50_1x8_STS_sthv2_video.py)            | 256 * 256  |       8 * 3 * 1        | 61.4% |  [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNU0rUgrmoIaQaYXwg?e=cMPaiM)   |
+|     [R2plus1d34](Spatiotemporal_Finetuning/configs/recognition/r2plus1d/r2plus1d_r34_1x8_STS_sthv2_video.py)      | 256 * 256  |       8 * 3 * 1        | 63.0% |  [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNU0rUgrmoIaQaYXwg?e=cMPaiM)   |
+| [SlowFast50-4x16](Spatiotemporal_Finetuning/configs/recognition/slowfast/slowfast50_4x16_1x32_STS_sthv2_video.py) | 256 * 256  |       32 * 3 * 1       | 57.2% |  [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNU0rUgrmoIaQaYXwg?e=cMPaiM)   | 
+|      [Slowonly50](Spatiotemporal_Finetuning/configs/recognition/slowonly/slowonly50_1x8_STS_sthv2_video.py)       | 256 * 256  |       8 * 3 * 1        | 62.7% |  [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNU0rUgrmoIaQaYXwg?e=cMPaiM)   |
+|              [X3D-S](Spatiotemporal_Finetuning/configs/recognition/x3d/x3d_s_1x8_STS_sthv2_video.py)              | 256 * 256  |       8 * 3 * 1        | 58.3% |  [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNU0rUgrmoIaQaYXwg?e=cMPaiM)   |
 
 
 After downloading the checkpoints and putting them into the target path, you can fine-tune or test the models with corresponding [configs](Spatiotemporal_Finetuning/configs) following the instruction bellow.
