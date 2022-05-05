@@ -1,9 +1,6 @@
 # In Defense of Image Pre-Training for Spatiotemporal Recognition   [[arXiv]]()
 
 
-```
-citation
-```
 
 **[NEW!]**  2022/5/5 - We have released the code and models.
 
@@ -238,3 +235,10 @@ bash tools/dist_test.sh configs/recognition/csn/ircsn50_32x2_STS_k400_video.py \
 
 This repo is based on [timm](https://github.com/rwightman/pytorch-image-models) and [mmaction2](https://github.com/open-mmlab/mmaction2).
 Thanks the contributors of these repos!
+
+
+## Citation
+
+```
+citation
+```
