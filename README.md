@@ -39,16 +39,15 @@ This is a PyTorch/GPU implementation of the paper  [In Defense of Image Pre-Trai
 
 - [Prerequisites](#prerequisites)
 
-- [Data Preparation](#Video Dataset Preparation)
+- [Video Dataset Preparation](#Video Dataset Preparation)
 
-- [Model ZOO ](#Model ZOO )
+- [Model ZOO](#Model ZOO )
 
 - [Usage](#usage)
 
 
 
 ## Prerequisites
-
 
 
 The code is built with following libraries:
