@@ -137,14 +137,14 @@ We provide ImageNet-1k pre-trained weights for five video models. All models are
 
 Here we provided the 50-epoch fine-tuning configs and checkpoints. We also include some 100-epochs checkpoints for a better performance but with a comparable computation.  
 
-|                                                  Models/Configs                                                  | Resolution | Frames * Crops * Clips | 50-epoch Top-1 | 100-epoch Top1       | Checkpoints folder |
-|:----------------------------------------------------------------------------------------------------------------:|:----------:|:----------------------:|----------------|----------------------|:------------------:|
-|           [ir-CSN50](Spatiotemporal_Finetuning/configs/recognition/csn/ircsn50_32x2_STS_k400_video.py)           | 256 * 256  |      32 * 3 * 10       | 76.8%          | 76.7%                |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUoq-nohdT5nwtTiw?e=aZfsJQ)      |
-|      [R2plu1d34](Spatiotemporal_Finetuning/configs/recognition/r2plus1d/r2plus1d_r34_8x8_STS_k400_video.py)      | 256 * 256  |       8 * 3 * 10       | 76.2%          | Over training budget |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUoq-nohdT5nwtTiw?e=aZfsJQ)      |
-| [SlowFast50-4x16](Spatiotemporal_Finetuning/configs/recognition/slowfast/slowfast50_4x16_32x2_STS_k400_video.py) | 256 * 256  |      32 * 3 * 10       | 76.2%          | 76.9%                |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUoq-nohdT5nwtTiw?e=aZfsJQ)      |
-|  [SlowFast50-8x8](Spatiotemporal_Finetuning/configs/recognition/slowfast/slowfast50_8x8_32x2_STS_k400_video.py)  | 256 * 256  |      32 * 3 * 10       | 77.2%          | 77.9%                |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUoq-nohdT5nwtTiw?e=aZfsJQ)      |
-|      [Slowonly50](Spatiotemporal_Finetuning/configs/recognition/slowonly/slowonly50_8x8_STS_k400_video.py)       | 256 * 256  |       8 * 3 * 10       | 75.7%          | Over training budget |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUoq-nohdT5nwtTiw?e=aZfsJQ)      |
-|             [X3D-S](Spatiotemporal_Finetuning/configs/recognition/x3d/x3d_s_13x6_STS_k400_video.py)              | 192 * 192  |      13 * 3 * 10       | 72.5%          | 73.9%                |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUoq-nohdT5nwtTiw?e=aZfsJQ)      |
+|                                                  Models/Configs                                                  | Resolution | Frames * Crops * Clips | 50-epoch Top-1 |    100-epoch Top1    | Checkpoints folder |
+|:----------------------------------------------------------------------------------------------------------------:|:----------:|:----------------------:|:--------------:|:--------------------:|:------------------:|
+|           [ir-CSN50](Spatiotemporal_Finetuning/configs/recognition/csn/ircsn50_32x2_STS_k400_video.py)           | 256 * 256  |      32 * 3 * 10       |     76.8%      |        76.7%         |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUoq-nohdT5nwtTiw?e=aZfsJQ)      |
+|      [R2plu1d34](Spatiotemporal_Finetuning/configs/recognition/r2plus1d/r2plus1d_r34_8x8_STS_k400_video.py)      | 256 * 256  |       8 * 3 * 10       |     76.2%      | Over training budget |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUoq-nohdT5nwtTiw?e=aZfsJQ)      |
+| [SlowFast50-4x16](Spatiotemporal_Finetuning/configs/recognition/slowfast/slowfast50_4x16_32x2_STS_k400_video.py) | 256 * 256  |      32 * 3 * 10       |     76.2%      |        76.9%         |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUoq-nohdT5nwtTiw?e=aZfsJQ)      |
+|  [SlowFast50-8x8](Spatiotemporal_Finetuning/configs/recognition/slowfast/slowfast50_8x8_32x2_STS_k400_video.py)  | 256 * 256  |      32 * 3 * 10       |     77.2%      |        77.9%         |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUoq-nohdT5nwtTiw?e=aZfsJQ)      |
+|      [Slowonly50](Spatiotemporal_Finetuning/configs/recognition/slowonly/slowonly50_8x8_STS_k400_video.py)       | 256 * 256  |       8 * 3 * 10       |     75.7%      | Over training budget |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUoq-nohdT5nwtTiw?e=aZfsJQ)      |
+|             [X3D-S](Spatiotemporal_Finetuning/configs/recognition/x3d/x3d_s_13x6_STS_k400_video.py)              | 192 * 192  |      13 * 3 * 10       |     72.5%      |        73.9%         |      [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNUoq-nohdT5nwtTiw?e=aZfsJQ)      |
 
 
 
@@ -152,7 +152,7 @@ Here we provided the 50-epoch fine-tuning configs and checkpoints. We also inclu
 
 
 |                                                                                       Models/Configs                                                                                       | Resolution | Frames * Crops * Clips | Top-1 | Checkpoints |
-|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----------:|:----------------------:|-------|:-----------:|
+|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----------:|------------------------|:-----:|-------------|
 |                                                [ir-CSN50](Spatiotemporal_Finetuning/configs/recognition/csn/ircsn50_1x8_STS_sthv2_video.py)                                                | 256 * 256  |       8 * 3 * 1        | 61.4% |  [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNU0rUgrmoIaQaYXwg?e=cMPaiM)   |
 |                                          [R2plu1d34](Spatiotemporal_Finetuning/configs/recognition/r2plus1d/r2plus1d_r34_1x8_STS_sthv2_video.py)                                           | 256 * 256  |       8 * 3 * 1        | 63.0% |  [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNU0rUgrmoIaQaYXwg?e=cMPaiM)   |
 |                                     [SlowFast50-4x16](Spatiotemporal_Finetuning/configs/recognition/slowfast/slowfast50_4x16_1x32_STS_sthv2_video.py)                                      | 256 * 256  |       32 * 3 * 1       | 57.2% |  [ckpt](https://1drv.ms/u/s!Ag-2DquscdPuhNU0rUgrmoIaQaYXwg?e=cMPaiM)   | 
