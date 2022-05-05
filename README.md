@@ -116,7 +116,7 @@ We provide our annotation and data structure bellow for easy installation.
 
 ## Model ZOO 
 
-Here we provide video dataset list and pretrained weights in this [OneDrive](https://1drv.ms/u/s!Ag-2DquscdPuhNUmyCpCFthKxzsLeg?e=whyUxn) or [GoogleDrive](). 
+Here we provide video dataset list and pretrained weights in this [OneDrive](https://1drv.ms/u/s!Ag-2DquscdPuhNUmyCpCFthKxzsLeg?e=whyUxn) or [GoogleDrive](https://drive.google.com/drive/folders/1CrQ0q_LhRTPBBew9hMK7SLmeUdwb0qR3?usp=sharing). 
 
 ## ImageNet-1k
 
