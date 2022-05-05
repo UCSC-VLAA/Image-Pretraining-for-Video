@@ -240,5 +240,4 @@ Thanks the contributors of these repos!
 ## Citation
 
 ```
-citation
 ```
