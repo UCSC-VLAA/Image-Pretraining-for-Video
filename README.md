@@ -1,4 +1,4 @@
-# In Defense of Image Pre-Training for Spatiotemporal Recognition   [[arXiv]](https://arxiv.org/abs/2205.01721)
+# In Defense of Image Pre-Training for Spatiotemporal Recognition
 
 
 
