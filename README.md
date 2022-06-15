@@ -246,7 +246,7 @@ Thanks the contributors of these repos!
 ```
 @article{li2022defense,
   title   = {In Defense of Image Pre-Training for Spatiotemporal Recognition}, 
-  author  = {Xianhang Li and Huiyu Wang and Chen Wei and Jieru Mei and Alan Yuille and Yuyin Zhou and Cihang Xie}},
+  author  = {Xianhang Li and Huiyu Wang and Chen Wei and Jieru Mei and Alan Yuille and Yuyin Zhou and Cihang Xie},
   journal = {arXiv preprint arXiv:2205.01721},
   year    = {2022},
 }
