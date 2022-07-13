@@ -1,9 +1,9 @@
 # In Defense of Image Pre-Training for Spatiotemporal Recognition
 
 
-**[NEW!]**  2022/7/o - Our paper has been accepted by **ECCV 2022**.
+**[NEW!]**  2022/7/8 - Our paper has been accepted by **ECCV 2022**.
 
-**[NEW!]**  2022/5/5 - We have released the code and models.
+ 2022/5/5 - We have released the code and models.
 
 
 
